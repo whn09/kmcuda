@@ -26,7 +26,8 @@ class CMakeBuild(build_py):
 
     def _build(self, builddir=None):
         if platform != "darwin":
-            cuda_toolkit_dir = os.getenv("CUDA_TOOLKIT_ROOT_DIR")
+            #cuda_toolkit_dir = os.getenv("CUDA_TOOLKIT_ROOT_DIR")
+            cuda_toolkit_dir = "/usr/local/cuda"
             if cuda_toolkit_dir is None:
                 raise SetupConfigurationError(
                     "CUDA_TOOLKIT_ROOT_DIR environment variable must be defined")
